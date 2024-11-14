@@ -1,6 +1,8 @@
 from flask import Flask
-from routes.email_routes import email_blueprint
+from email_producer.app.routes import email_blueprint
+from dotenv import load_dotenv
 
+load_dotenv(verbose=True)
 
 def create_app():
     app = Flask(__name__)
