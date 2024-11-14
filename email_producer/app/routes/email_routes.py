@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 import email_producer.app.service.email_service as email_service
 
 
-email_blueprint = Blueprint('menu', __name__)
+email_blueprint = Blueprint('email', __name__)
 
 
 @email_blueprint.route('/', methods=['POST'])

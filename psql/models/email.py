@@ -15,4 +15,5 @@ class Email(Base):
 
     device = relationship("Device", back_populates="email", lazy='joined')
     location = relationship("Location", back_populates="email", lazy='joined')
-    sentences = relationship("Sentence", back_populates="email", lazy='joined', cascade="all, delete-orphan")
+    hostage_sentences = relationship("HostageSentence", back_populates="email", lazy='joined', cascade="all, delete-orphan")
+    explosive_sentences = relationship("ExplosiveSentence", back_populates="email", lazy='joined', cascade="all, delete-orphan")

@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from hostage_email_consumer.app.consumer.consume_emails import consume_emails
+from explosive_email_consumer.app.consumer.consume_emails import consume_emails
 from psql.psql_functions import initate_db, drop_data_base_if_exists
 
 load_dotenv(verbose=True)

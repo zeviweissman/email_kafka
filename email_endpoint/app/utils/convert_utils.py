@@ -9,3 +9,8 @@ def email_model_to_json(email: Email):
         'sentences': ([sentence.sentence for sentence in email.explosive_sentences] +
                       [sentence.sentence for sentence in email.hostage_sentences])
     }
+
+
+def email_model_to_sentences_joined(email: Email):
+    return (", ".join(([sentence.sentence for sentence in email.explosive_sentences] +
+                      [sentence.sentence for sentence in email.hostage_sentences])))

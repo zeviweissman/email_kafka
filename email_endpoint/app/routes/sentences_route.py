@@ -9,3 +9,8 @@ sentences_blueprint = Blueprint('sentences', __name__)
 def get_most_common_word():
     common_word = sentence_service.get_most_common_word()
     return jsonify(common_word), 200
+
+@sentences_blueprint.route('/<email>', methods=['GET'])
+def get_sentences_by_email(email):
+    sentences = sentence_service.get_sentences_by_email_address(email)
+    return jsonify(sentences), 200

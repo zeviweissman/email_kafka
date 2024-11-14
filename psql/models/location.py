@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Date, String, ForeignKey, Float
+from sqlalchemy import Column, Integer, Date, String, ForeignKey, Float, UniqueConstraint
 from psql.psql_functions import Base
 from sqlalchemy.orm import relationship
 
@@ -12,7 +12,7 @@ class Location(Base):
     country = Column(String)
 
     __table_args__ = (
-        UniqueConstraint('lat', 'lon', 'city', 'country', name='uq_location'),
+        UniqueConstraint('lat', 'lon', 'city', 'country', name='uq_location', ),
     )
 
 

@@ -17,5 +17,5 @@ def convert_json_to_email_model(email_json) -> Email:
             city = email_json['location']['city'],
             country = email_json['location']['country']
         ),
-        hostage_sentences = [ExplosiveSentence(sentence = sentence) for sentence in email_json['sentences']],
+        explosive_sentences = [ExplosiveSentence(sentence = sentence) for sentence in email_json['sentences']],
     )

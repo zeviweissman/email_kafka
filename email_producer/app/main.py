@@ -1,5 +1,5 @@
 from flask import Flask
-from email_producer.app.routes import email_blueprint
+from email_kafka.email_producer.app.routes.email_routes import email_blueprint
 from dotenv import load_dotenv
 
 load_dotenv(verbose=True)

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Date, String, ForeignKey, Float
+from sqlalchemy import Column, Integer, Date, String, ForeignKey, Float, UniqueConstraint
 from psql.psql_functions import Base
 from sqlalchemy.orm import relationship
 

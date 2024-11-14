@@ -1,9 +1,12 @@
 import os
+
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy_repr import RepresentableBase
 from sqlalchemy_utils import database_exists, create_database, drop_database
 
+load_dotenv(verbose=True)
 PSQL_URL = os.environ['PSQL_URL']
 
 Base = declarative_base(cls=RepresentableBase)

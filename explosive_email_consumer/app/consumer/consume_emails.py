@@ -1,6 +1,6 @@
 import os
 from email_kafka.kafka_connection.consumer import consume
-import hostage_email_consumer.app.service.email_service as email_service
+import explosive_email_consumer.app.service.email_service as email_service
 
 explosive_topic = os.environ['EXPLOSIVE_TOPIC']
 
